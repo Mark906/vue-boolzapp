@@ -70,7 +70,7 @@
 }
 
 .contact {
-    height: 40%;
+    height: 55%;
     width: 100%;
     background-color: lightgrey;
 }
@@ -80,6 +80,8 @@
     width: 100%;
     background-color: grey;
 }
+
+
 
 .chat {
     height: 70%;
