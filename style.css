@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: lightgreen;
+    justify-content: center;
+    position: relative;
+}
+
+.css-background-top {
+    height: 35%;
+    background-color: brown;
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+#boolzapp-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 70%;
+    background-color: darkgreen;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.boolzapp-box {
+    display: flex;
+    flex-grow: 1;
+}
+
+.boolzapp-box-left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 30%;
+    background-color: violet;
+}
+
+.boolzapp-box-right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 70%;
+}
+
+.user {
+    height: 15%;
+    width: 100%;
+    background-color: grey;
+}
+
+.notifications {
+    height: 20%;
+    width: 100%;
+    background-color: blue;
+}
+
+.search {
+    height: 10%;
+    width: 100%;
+}
+
+.contact {
+    height: 65%;
+    width: 100%;
+    background-color: lightgrey;
+}
+
+.friend {
+    height: 15%;
+    width: 100%;
+    background-color: grey;
+}
+
+.chat {
+    height: 70%;
+    width: 100%;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+}
+
+.send-zone {
+    height: 15%;
+    width: 100%;
+    background-color: grey;
+}
