@@ -57,7 +57,7 @@
 }
 
 .notifications {
-    height: 20%;
+    height: 10%;
     width: 100%;
     background-color: #9DE1FE;
 }
@@ -69,7 +69,7 @@
 }
 
 .contact {
-    height: 60%;
+    height: 70%;
     width: 100%;
     overflow: auto;
     background-color: white;
@@ -81,7 +81,10 @@
     flex-direction: row;
     justify-content: space-evenly;
     height: 70px;
+}
 
+.contacts:hover {
+    cursor: pointer;
 }
 
 .contact-info {
