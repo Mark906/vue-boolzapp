@@ -33,7 +33,7 @@
 
 .boolzapp-box {
     display: flex;
-    flex-grow: 1;
+    height: 100%;
 }
 
 .boolzapp-box-left {
@@ -51,7 +51,7 @@
 }
 
 .user {
-    height: 70px;
+    height: 10%;
     width: 100%;
     background-color: #EDEDED;
     display: flex;
@@ -92,7 +92,7 @@
 }
 
 .notifications {
-    height: 80px;
+    height: 15%;
     width: 100%;
     background-color: #9DE1FE;
 }
@@ -104,7 +104,7 @@
 }
 
 .contact {
-    height: calc(100% - 190px);
+    height: calc(100% - 40px);
     width: 100%;
     overflow: auto;
     background-color: white;
