@@ -14,7 +14,7 @@
 }
 
 .css-background-top {
-    height: 25%;
+    height: 25vh;
     background-color: brown;
     z-index: 0;
     position: absolute;
@@ -22,7 +22,7 @@
     top: 0;
 }
 
-#boolzapp-wrapper {
+#root {
     display: flex;
     flex-direction: column;
     height: 95vh;
@@ -42,7 +42,6 @@
     flex-direction: column;
     height: 100%;
     width: 30%;
-    background-color: violet;
 }
 
 .boolzapp-box-right {
@@ -69,7 +68,7 @@
     width: 100%;
 }
 
-.contact {
+.contacts {
     height: 55%;
     width: 100%;
     background-color: lightgrey;
@@ -89,6 +88,34 @@
     background-color: yellow;
     display: flex;
     flex-direction: column;
+    overflow: auto;
+}
+
+.message {
+
+    padding: 10px;
+    max-width: 240px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    margin-top: 20px;
+    clear: both;
+
+}
+
+.sent {
+
+    background-color: lightgreen;
+    float: right;
+    margin-right: 105px;
+
+}
+
+.received {
+
+    background-color: white;
+    margin-left: 105px;
+    float: left;
+
 }
 
 .send-zone {

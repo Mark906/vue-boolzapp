@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>BoolzApp</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     </head>
     <body>
         <div id="wrapper">
@@ -11,14 +12,14 @@
 
             </div>
 
-            <div id="boolzapp-wrapper">
+            <div id="root">
 
                 <div class="boolzapp-box">
 
                     <div class="boolzapp-box-left">
 
                         <div class="user">
-
+                            <p>{{ contacts[0].name }}</p>
                         </div>
 
                         <div class="notifications">
@@ -29,22 +30,42 @@
 
                         </div>
 
-                        <div class="contact">
+                        <div class="contacts" v-for="contact in contacts">
+
+                            <div class="contact-logo">
+                                <img :src="contact.avatar" :alt="contact.name">
+                            </div>
+
+                            <div class="contact-info">
+                                <div class="contact-info-container">
+                                    <span class="contact-names">{{ contact.name }}</span>
+                                    <span class="time f-right">12:00.</span>
+                                </div>
+                                <small>Ultimo messaggio inviato.</small>
+                            </div>
 
                         </div>
 
                     </div>
 
                     <div class="boolzapp-box-right">
+
                         <div class="friend">
 
                         </div>
+
                         <div class="chat">
 
+                            <div class="content">
+                                <p class="message sent">Ciao</p>
+                            </div>
+
                         </div>
+
                         <div class="send-zone">
 
                         </div>
+
                     </div>
 
                 </div>
@@ -52,5 +73,7 @@
             </div>
 
         </div>
+
+        <script src="main.js" charset="utf-8"></script>
     </body>
 </html>
