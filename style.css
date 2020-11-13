@@ -54,6 +54,41 @@
     height: 70px;
     width: 100%;
     background-color: #EDEDED;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-right: 1px solid lightgrey;
+}
+
+.user > .contact-logo {
+    margin-left: 8px;
+}
+
+.circle {
+    height: 4px;
+    width: 4px;
+    border-radius: 100%;
+    background-color: black;
+    margin-bottom: 1px;
+}
+
+.links {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.links i {
+    margin: auto;
+}
+
+.links i:hover, .links .options:hover {
+    cursor: pointer;
+}
+
+.options {
+    margin: auto;
 }
 
 .notifications {
