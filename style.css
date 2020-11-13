@@ -68,10 +68,11 @@
     width: 100%;
 }
 
-.contacts {
+.contact {
     height: 55%;
     width: 100%;
     background-color: lightgrey;
+    overflow: auto;
 }
 
 .friend {
