@@ -51,25 +51,25 @@
 }
 
 .user {
-    height: 10%;
+    height: 70px;
     width: 100%;
     background-color: #EDEDED;
 }
 
 .notifications {
-    height: 10%;
+    height: 80px;
     width: 100%;
     background-color: #9DE1FE;
 }
 
 .search {
-    height: 10%;
+    height: 40px;
     width: 100%;
     background-color: #F6F6F6;
 }
 
 .contact {
-    height: 70%;
+    height: calc(100% - 190px);
     width: 100%;
     overflow: auto;
     background-color: white;
@@ -116,14 +116,14 @@
 }
 
 .friend {
-    height: 10%;
+    height: 70px;
     width: 100%;
     background-color: #EDEDED;
 }
 
 
 .chat {
-    height: 75%;
+    height: calc(100% - 140px);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -159,7 +159,7 @@
 }
 
 .send-zone {
-    height: 15%;
+    height: 70px;
     width: 100%;
     background-color: #EDEDED;
 }
