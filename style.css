@@ -186,15 +186,15 @@
 .sent {
 
     background-color: lightgreen;
-    float: right;
-    margin-right: 105px;
+    align-self: flex-end;
+    margin-right: 60px;
 
 }
 
 .received {
 
     background-color: white;
-    margin-left: 105px;
-    float: left;
+    margin-left: 60px;
+    align-self: flex-start;
 
 }

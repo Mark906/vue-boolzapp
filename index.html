@@ -50,13 +50,13 @@
                         </div>
 
                         <div class="contact">
-                            <div class="contacts" v-for="contact in contacts">
+                            <div class="contacts" v-for="(contact,index) in contacts">
 
                                 <div class="contact-logo">
                                     <img :src=" 'img/avatar' + contact.avatar + '.png' ">
                                 </div>
 
-                                <div class="contact-info">
+                                <div @click="change(index)" class="contact-info">
                                     <div class="contact-info-container">
                                         <span class="contact-names">{{ contact.name }}</span>
                                     </div>
@@ -76,8 +76,9 @@
 
                         <div class="chat">
 
-                            <div class="content">
-                                <p class="message sent">Ciao</p>
+                            <div v-for="(message,index) in contacts[contactActive].messages" class="message" :class='getMessageClass(index)'>
+                                <p>{{message.message}}</p>
+                                <p>{{message.date}}</p>
                             </div>
 
                         </div>

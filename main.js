@@ -180,7 +180,21 @@ var app = new Vue(
                                 }
                             ],
                 },
-            ]
+
+
+            ],
+            newMessage: '',
+            contactActive: 0,
+        },
+        methods: {
+            getMessageClass(index){
+                let thisContact = this.contacts[this.contactActive];
+                let messageClass = thisContact.messages[index].status;
+                return messageClass;
+            },
+            change(index){
+                this.contactActive = index;
+            }
         }
     }
 );
