@@ -71,8 +71,32 @@
 .contact {
     height: 55%;
     width: 100%;
-    background-color: lightgrey;
+    background-color: white;
     overflow: auto;
+}
+
+.contacts {
+    border-bottom: 1px solid #F2F2F2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 55px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contacts:first-child {
+    border-top: 1px solid #F2F2F2;
 }
 
 .friend {
