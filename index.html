@@ -34,17 +34,16 @@
                             <div class="contacts" v-for="contact in contacts">
 
                                 <div class="contact-logo">
-                                    <img :src="contact.avatar">
+                                    <img :src=" 'img/avatar' + contact.avatar + '.png' ">
                                 </div>
 
                                 <div class="contact-info">
                                     <div class="contact-info-container">
                                         <span class="contact-names">{{ contact.name }}</span>
-                                        <span class="time f-right">12:00.</span>
                                     </div>
                                     <small>Ultimo messaggio inviato.</small>
                                 </div>
-
+                                <span class="time f-right">12:00</span>
                             </div>
                         </div>
 
