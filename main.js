@@ -194,7 +194,19 @@ var app = new Vue(
             },
             change(index){
                 this.contactActive = index;
+            },
+            add_message(element){
+                let thisContact = this.contacts[this.contactActive];
+                let thisMessages = thisContact.messages;
+                thisMessages.push(
+                    {
+                        date: '10/01/2020 15:30:55',
+                        message: element,
+                        status: 'sent'
+                    }
+                );
             }
+
         }
     }
 );

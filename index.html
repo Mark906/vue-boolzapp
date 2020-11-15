@@ -122,7 +122,7 @@
 
                         <div class="send-zone">
                             <i class="far fa-smile fa-2x"></i>
-                            <input type="text" name="" value="" placeholder="  Scrivi un messaggio">
+                            <input v-model="newMessage" v-on:keyup.enter="add_message(newMessage)" type="text" placeholder="Scrivi un messaggio">
                             <i class="fas fa-microphone fa-2x"></i>
                         </div>
 
