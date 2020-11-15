@@ -61,13 +61,13 @@
                         </div>
 
                         <div class="contact">
-                            <div class="contacts" v-for="(contact,index) in contacts">
+                            <div @click="change(index)" class="contacts" v-for="(contact,index) in contacts">
 
                                 <div class="contact-logo">
                                     <img :src=" 'img/avatar' + contact.avatar + '.png' ">
                                 </div>
 
-                                <div @click="change(index)" class="contact-info">
+                                <div class="contact-info">
                                     <div class="contact-info-container">
                                         <span class="contact-names">{{ contact.name }}</span>
                                     </div>
@@ -122,7 +122,7 @@
 
                         <div class="send-zone">
                             <i class="far fa-smile fa-2x"></i>
-                            <input v-model="newMessage" v-on:keyup.enter="add_message(newMessage)" type="text" placeholder="Scrivi un messaggio">
+                            <input v-model="newMessage" v-on:keyup.enter="add_message(newMessage),setTimeout(add_message_friend, 1000)" type="text" placeholder="Scrivi un messaggio">
                             <i class="fas fa-microphone fa-2x"></i>
                         </div>
 
