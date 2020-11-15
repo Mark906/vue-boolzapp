@@ -21,7 +21,7 @@
 
                         <div class="user">
                             <div class="contact-logo">
-                                <img :src=" 'img/avatar_io.png' " alt="">
+                                <img :src=" 'img/avatar_1.png' " alt="">
                             </div>
                             <div class="links">
                                 <i class="fas fa-spinner"></i>
@@ -42,11 +42,22 @@
                         </div>
 
                         <div class="notifications">
-
+                            <div class="img_notifications">
+                                <i class="fas fa-bell-slash fa-2x"></i>
+                            </div>
+                            <div class="receive_notifications">
+                                <p>Ricevi notifiche di nuovi messaggi</p>
+                                <a href="#"><small>Attiva notifiche desktop</small></a>
+                            </div>
                         </div>
 
                         <div class="search">
 
+                            <button type="button" name="button">
+                                <img src="img/searchbutton.png" alt="">
+                            </button>
+
+                            <input type="text" name="input_text" value="" placeholder="  Cerca">
                         </div>
 
                         <div class="contact">
@@ -71,7 +82,33 @@
                     <div class="boolzapp-box-right">
 
                         <div class="friend">
+                            <div class="friend-left">
+                                <div class="contact-logo">
+                                    <img :src=" 'img/avatar' + contacts[contactActive].avatar + '.png' " alt="">
+                                </div>
+                                <div class="info_friend">
+                                    <p>{{contacts[contactActive].name}}.</p>
+                                    <small>Ultimo accesso alle ore: 15:40.</small>
+                                </div>
 
+                            </div>
+                        <div class="friend-right">
+                            <div class="friend_options">
+                                <i class="fas fa-search"></i>
+                                <i class="fas fa-paperclip"></i>
+                                <div class="options">
+                                    <div class="circle">
+
+                                    </div>
+                                    <div class="circle">
+
+                                    </div>
+                                    <div class="circle">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         </div>
 
                         <div class="chat">
@@ -84,7 +121,9 @@
                         </div>
 
                         <div class="send-zone">
-
+                            <i class="far fa-smile fa-2x"></i>
+                            <input type="text" name="" value="" placeholder="  Scrivi un messaggio">
+                            <i class="fas fa-microphone fa-2x"></i>
                         </div>
 
                     </div>

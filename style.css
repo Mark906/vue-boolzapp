@@ -68,7 +68,7 @@
     height: 4px;
     width: 4px;
     border-radius: 100%;
-    background-color: black;
+    background-color: lightslategray;
     margin-bottom: 1px;
 }
 
@@ -76,11 +76,13 @@
     width: 200px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
 }
 
 .links i {
-    margin: auto;
+    margin: 10px;
+    color: lightslategray;
 }
 
 .links i:hover, .links .options:hover {
@@ -88,20 +90,76 @@
 }
 
 .options {
-    margin: auto;
+    margin: 10px;
+    height: 16px;
+    width: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .notifications {
     height: 100px;
     width: 100%;
     background-color: #9DE1FE;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.img_notifications {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    margin: 2%;
+}
+
+.fa-bell-slash {
+    position: absolute;
+    top: 20%;
+    left: 16%;
+    color: #9DE1FE;
 }
 
 .search {
     height: 40px;
     width: 100%;
+    display: flex;
     background-color: #F6F6F6;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
+
+.search button {
+    width: 60px;
+    height: 25px;
+    background-color: white;
+    border: none;
+    padding: 5px;
+
+}
+
+.search button:hover{
+    cursor: pointer;
+}
+
+.search>button>img {
+    height: 100%;
+}
+
+.search input {
+    height: 25px;
+    width: 80%;
+    border: none;
+}
+
+.search input::placeholder {
+    padding: 5px;
+}
+
 
 .contact {
     height: calc(100% - 210px);
@@ -125,7 +183,7 @@
 .contact-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .contact-logo {
@@ -154,6 +212,50 @@
     height: 70px;
     width: 100%;
     background-color: #EDEDED;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-search {
+    width: 16px;
+    height: 16px;
+    margin: 10px;
+}
+
+.fa-paperclip {
+    width: 16px;
+    height: 16px;
+    margin: 10px;
+}
+
+.friend-left {
+    display: flex;
+    align-items: center;
+}
+
+.friend-right {
+    display: flex;
+    width: 170px;
+}
+
+.friend-right i:hover, .friend-right .options:hover {
+    cursor: pointer;
+}
+
+.friend .contact-logo {
+    margin-left: 8px;
+    margin-right: 10px;
+}
+
+.friend_options {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: lightslategray;
 }
 
 
@@ -181,6 +283,21 @@
     height: 70px;
     width: 100%;
     background-color: #EDEDED;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.send-zone input {
+    width: 80%;
+    height: 30px;
+    border: none;
+    color: lightslategray;
+}
+
+.fa-smile, .fa-microphone {
+    color: lightslategray;
 }
 
 .sent {
