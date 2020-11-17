@@ -57,12 +57,12 @@
                                 <img src="img/searchbutton.png" alt="">
                             </button>
 
-                            <input type="text" name="input_text" value="" placeholder="  Cerca">
+                            <input v-model="search_text" type="text" name="input_text" placeholder="  Cerca">
                         </div>
 
                         <div class="contact">
-                            <div @click="change(index)" class="contacts" v-for="(contact,index) in contacts">
-
+                            <div @click="change(index)" class="contacts" v-for="(contact,index) in contacts" v-if="contact.name.includes(search_text)">
+                                
                                 <div class="contact-logo">
                                     <img :src=" 'img/avatar' + contact.avatar + '.png' ">
                                 </div>

@@ -96,7 +96,7 @@ var app = new Vue(
                             ],
                 },
                 {
-                    name: 'Michele',
+                    name: 'Gianfranco',
                     avatar: '_1',
                     visible: true,
                     messages: [
@@ -119,7 +119,7 @@ var app = new Vue(
                 },
 
                 {
-                    name: 'Fabio',
+                    name: 'Gabriele',
                     avatar: '_2',
                     visible: true,
                     messages: [
@@ -142,7 +142,7 @@ var app = new Vue(
                 },
 
                 {
-                    name: 'Samuele',
+                    name: 'Rodrigo',
                     avatar: '_3',
                     visible: true,
                     messages: [
@@ -164,7 +164,7 @@ var app = new Vue(
                             ],
                 },
                 {
-                    name: 'Luisa',
+                    name: 'Paolo',
                     avatar: '_4',
                     visible: true,
                     messages: [
@@ -184,8 +184,10 @@ var app = new Vue(
 
             ],
             newMessage: '',
+            search_text: '',
             contactActive: 0,
         },
+
         methods: {
             getMessageClass(index){
                 let thisContact = this.contacts[this.contactActive];
@@ -218,7 +220,8 @@ var app = new Vue(
                       status: 'received'
                   }
               );
-            }
+            },
+
 
           }
         }
