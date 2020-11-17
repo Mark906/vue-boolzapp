@@ -222,6 +222,17 @@ var app = new Vue(
               );
             },
 
+            search(){
+                for (var i = 0; i < this.contacts.length; i++) {
+                    if(this.search_text == ''){
+                        this.contacts[i].visible = true;
+                    } else if (this.contacts[i].name.includes(this.search_text)) {
+                        this.contacts[i].visible = true;
+                    } else {
+                        this.contacts[i].visible = false;
+                    }
+                }
+            }
 
           }
         }
