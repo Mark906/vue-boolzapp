@@ -116,6 +116,14 @@
                             <div v-for="(message,index) in contacts[contactActive].messages" class="message" :class='getMessageClass(index)'>
                                 <p>{{message.message}}</p>
                                 <p>{{message.date}}</p>
+                                <i @click="changeMessageActive(index)" class="fas fa-caret-down"></i>
+
+                                <div v-if="contacts[contactActive].messages[index].dropdown" class="dropdown-menu">
+                                    <ul id="dropdown">
+                                        <li><a href="#">Contact info</a></li>
+                                        <li><a @click="deleteMessage(index)" href="#">Delete</a></li>
+                                    </ul>
+                                </div>
                             </div>
 
                         </div>

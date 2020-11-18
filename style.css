@@ -276,11 +276,20 @@
     border-radius: 7px;
     margin-top: 20px;
     clear: both;
-
+    position: relative;
 }
 
 .message p {
   word-wrap: break-word;
+}
+
+.message i {
+    float: right;
+    padding: 5px;
+}
+
+.message i:hover {
+    cursor: pointer;
 }
 
 .send-zone {
@@ -318,4 +327,29 @@
     margin-left: 60px;
     align-self: flex-start;
 
+}
+
+.dropdown-menu {
+    width: 140px;
+    position: absolute;
+    height: 60px;
+    left: 70px;
+    top: 75px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1;
+}
+
+#dropdown {
+    width: 100%;
+}
+
+#dropdown li {
+    display: block;
+    padding: 5px;
+}
+
+#dropdown li>a {
+    text-decoration: none;
+    color: black;
 }
