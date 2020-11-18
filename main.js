@@ -248,7 +248,8 @@ var app = new Vue(
                     {
                         date: '10/01/2020 15:30:55',
                         message: element,
-                        status: 'sent'
+                        status: 'sent',
+                        dropdown: false
                     }
                 );
 
@@ -261,7 +262,8 @@ var app = new Vue(
                   {
                       date: '10/01/2020 15:30:55',
                       message: "Ok.",
-                      status: 'received'
+                      status: 'received',
+                      dropdown: false
                   }
               );
             },
