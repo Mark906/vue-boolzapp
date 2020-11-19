@@ -1,97 +1,113 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>BoolzApp</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-    </head>
-    <body>
-        <div id="wrapper">
-            <div class="css-background-top">
+<head>
+    <meta charset="utf-8">
+    <title>BoolzApp</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="css-background-top">
 
-            </div>
+        </div>
 
-            <div id="root">
+        <!-- Vue el: 'root' -->
 
-                <div class="boolzapp-box">
+        <div id="root">
 
-                    <div class="boolzapp-box-left">
+            <!-- Contenitore della webapp -->
+            <div class="boolzapp-box">
 
-                        <div class="user">
-                            <div class="contact-logo">
-                                <img :src=" 'img/avatar_1.png' " alt="">
-                            </div>
-                            <div class="links">
-                                <i class="fas fa-spinner"></i>
-                                <i class="far fa-comment-alt"></i>
-                                <div class="options">
-                                    <div class="circle">
+                <!-- Contenitore interno parte sinistra -->
+                <div class="boolzapp-box-left">
 
-                                    </div>
-                                    <div class="circle">
-
-                                    </div>
-                                    <div class="circle">
-
-                                    </div>
-                                </div>
-                            </div>
-
+                    <!-- Zona dell'utente -->
+                    <div class="user">
+                        <div class="contact-logo">
+                            <img :src=" 'img/avatar_1.png' " alt="">
                         </div>
+                        <div class="links">
+                            <i class="fas fa-spinner"></i>
+                            <i class="far fa-comment-alt"></i>
+                            <div class="options">
+                                <div class="circle">
 
-                        <div class="notifications">
-                            <div class="img_notifications">
-                                <i class="fas fa-bell-slash fa-2x"></i>
-                            </div>
-                            <div class="receive_notifications">
-                                <p>Ricevi notifiche di nuovi messaggi</p>
-                                <a href="#"><small>Attiva notifiche desktop</small></a>
-                            </div>
-                        </div>
-
-                        <div class="search">
-
-                            <button type="button" name="button">
-                                <img src="img/searchbutton.png" alt="">
-                            </button>
-
-                            <input v-on:keyup="search" v-model="search_text" type="text" name="input_text" placeholder="  Cerca">
-                        </div>
-
-                        <div class="contact">
-                            <div @click="change(index)" class="contacts" v-for="(contact,index) in contacts" v-if="contact.visible">
-
-                                <div class="contact-logo">
-                                    <img :src=" 'img/avatar' + contact.avatar + '.png' ">
                                 </div>
+                                <div class="circle">
 
-                                <div class="contact-info">
-                                    <div class="contact-info-container">
-                                        <span class="contact-names">{{ contact.name }}</span>
-                                    </div>
-                                    <small>Ultimo messaggio inviato.</small>
                                 </div>
-                                <span class="time f-right">12:00</span>
+                                <div class="circle">
+
+                                </div>
                             </div>
                         </div>
 
                     </div>
 
-                    <div class="boolzapp-box-right">
+                    <!-- Zona notifiche -->
+                    <div class="notifications">
+                        <div class="img_notifications">
+                            <i class="fas fa-bell-slash fa-2x"></i>
+                        </div>
+                        <div class="receive_notifications">
+                            <p>Ricevi notifiche di nuovi messaggi</p>
+                            <a href="#"><small>Attiva notifiche desktop</small></a>
+                        </div>
+                    </div>
 
-                        <div class="friend">
-                            <div class="friend-left">
-                                <div class="contact-logo">
-                                    <img :src=" 'img/avatar' + contacts[contactActive].avatar + '.png' " alt="">
-                                </div>
-                                <div class="info_friend">
-                                    <p>{{contacts[contactActive].name}}.</p>
-                                    <small>Ultimo accesso alle ore: 15:40.</small>
-                                </div>
+                    <!-- Zona ricerca contatti -->
+                    <div class="search">
 
+                        <button type="button" name="button">
+                            <img src="img/searchbutton.png" alt="">
+                        </button>
+
+                        <!-- Nel momento in cui si digita, v-model traccia il contenuto digitato nell'elemento search_text.
+                        Il valore contenuto in search_text (costantemente aggiornato via v-model) viene passato ogni qualvolta
+                        si digita alla funzione "search" via v-on:keyup -->
+                        <input v-on:keyup="search" v-model="search_text" type="text" name="input_text" placeholder="  Cerca">
+                    </div>
+
+                    <!-- Zona dei contatti -->
+                    <div class="contact">
+                        <!-- Creo dinamicamente blocchi di classe contacts tanti quanti sono i 'contact in contacts'. Questi ultimi
+                        compaiono e scompaiono a seconda della condizione relativa al v-if. v-if consente di tracciare la
+                        visibilità, manipolata dalla funzione search -->
+                        <div @click="change(index)" class="contacts" v-for="(contact,index) in contacts" v-if="contact.visible">
+
+                            <div class="contact-logo">
+                                <img :src=" 'img/avatar' + contact.avatar + '.png' ">
                             </div>
+
+                            <div class="contact-info">
+                                <div class="contact-info-container">
+                                    <span class="contact-names">{{ contact.name }}</span>
+                                </div>
+                                <small>Ultimo messaggio inviato.</small>
+                            </div>
+                            <span class="time f-right">12:00</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Contenitore interno parte destra -->
+                <div class="boolzapp-box-right">
+
+                    <!-- Zona del contatto attivo -->
+                    <div class="friend">
+                        <div class="friend-left">
+                            <div class="contact-logo">
+                                <img :src=" 'img/avatar' + contacts[contactActive].avatar + '.png' " alt="">
+                            </div>
+                            <div class="info_friend">
+                                <p>{{contacts[contactActive].name}}.</p>
+                                <small>Ultimo accesso alle ore: 15:40.</small>
+                            </div>
+
+                        </div>
                         <div class="friend-right">
                             <div class="friend_options">
                                 <i class="fas fa-search"></i>
@@ -109,31 +125,45 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
+                    </div>
 
-                        <div class="chat">
+                    <!-- Zona delle conversazioni -->
+                    <div class="chat">
 
-                            <div v-for="(message,index) in contacts[contactActive].messages" class="message" :class='getMessageClass(index)'>
-                                <p>{{message.message}}</p>
-                                <p>{{message.date}}</p>
-                                <i @click="changeMessageActive(index)" class="fas fa-caret-down"></i>
+                        <!-- Creo dinamicamente i messaggi già presenti nella struttura, con classe message +
+                        quello che torna dal v-bind:class, che determinerà se il messaggio è inviato o ricevuto (cambiandone poi il css)
+                        -->
+                        <div v-for="(message,index) in contacts[contactActive].messages" class="message" :class='getMessageClass(index)'>
+                            <p>{{message.message}}</p>
+                            <p>{{message.date}}</p>
+                            <!-- Al click, si attiva la funzione changeMessageActive, tracciando il messaggio cliccato e modificandone
+                            la sua specifica proprietà 'dropdown' -->
+                            <i @click="changeMessageActive(index)" class="fas fa-caret-down"></i>
 
-                                <div v-if="contacts[contactActive].messages[index].dropdown" class="dropdown-menu">
-                                    <ul id="dropdown">
-                                        <li><a href="#">Contact info</a></li>
-                                        <li><a @click="deleteMessage(index)" href="#">Delete</a></li>
-                                    </ul>
-                                </div>
+                            <!-- Ottenuto il messaggio corrente, e cambiata la proprietà dropdown, se questa è vera allora crea il blocco
+                            relativo al dropdown di classe dropdown-menu, altrimenti, se gia presente, lo rimuove -->
+                            <div v-if="contacts[contactActive].messages[index].dropdown" class="dropdown-menu">
+                                <ul id="dropdown">
+                                    <li><a href="#">Contact info</a></li>
+
+                                    <!-- Al click, si attiva la funzione deleteMessage consentendo la cancellazione del messaggio
+                                    cliccato -->
+                                    <li><a @click="deleteMessage(index)" href="#">Delete</a></li>
+                                </ul>
                             </div>
-
                         </div>
 
-                        <div class="send-zone">
-                            <i class="far fa-smile fa-2x"></i>
-                            <input v-model="newMessage" v-on:keyup.enter="add_message(newMessage),setTimeout(add_message_friend, 1000)" type="text" placeholder="Scrivi un messaggio">
-                            <i class="fas fa-microphone fa-2x"></i>
-                        </div>
+                    </div>
 
+                    <!-- Zona relativa all'invio di nuovi messaggi -->
+                    <div class="send-zone">
+                        <i class="far fa-smile fa-2x"></i>
+
+                        <!-- Via v-model, traccio il contenuto dell'elemento newMessage,via v-on:keyup, nel momento in cui si preme 'enter',
+                        si attivano tre funzioni. La prima aggiunge un messaggio alla Zona delle conversazioni, lato user, la seconda,
+                        passato un secondo dall' 'enter' aggiunge un messaggio lato 'friend' -->
+                        <input v-model="newMessage" v-on:keyup.enter="add_message(newMessage),setTimeout(add_message_friend, 1000)" type="text" placeholder="Scrivi un messaggio">
+                        <i class="fas fa-microphone fa-2x"></i>
                     </div>
 
                 </div>
@@ -142,6 +172,8 @@
 
         </div>
 
-        <script src="main.js" charset="utf-8"></script>
-    </body>
+    </div>
+
+    <script src="main.js" charset="utf-8"></script>
+</body>
 </html>
